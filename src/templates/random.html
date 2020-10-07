@@ -1,0 +1,34 @@
+{% extends 'wrapper.html' %}
+
+{% block style %}	
+	<link rel="stylesheet" href="static/CSS/random.css" type="text/css" media="screen" charset="utf-8">
+{% endblock %}	
+
+
+{% block content %}	
+
+	<div class="container">
+		<img class="logo" src="https://www.mariowiki.com/images/thumb/7/78/Mario_Kart_8_Deluxe_logo.png/800px-Mario_Kart_8_Deluxe_logo.png">
+		<div class="tool">
+		    <div class="box">{{ character }}</div>
+		    <div class="box">{{ kart }}</div>
+		    <div class="box">{{ tires }}</div>
+		    <div class="box">{{ glider }}</div>
+		</div>
+
+		<form action="/random_build" method="POST" accept-charset="utf-8">
+			<input class="btn" type="submit" name="submit" value="Randomize">	    
+		</form>
+
+		<div class="code">
+			<span class='text'>Kart Code</span>
+			<div class="output">
+			    {{ code }}
+			</div>
+		</div>
+
+		<img class="jl" src="/static/imgs/logo.png">
+
+	</div>
+
+{% endblock %}	

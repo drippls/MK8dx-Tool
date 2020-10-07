@@ -1,0 +1,70 @@
+html, body {
+	height: 100%;
+    margin: 0;
+	padding: 0;
+	font-family: 'Teko', sans-serif;
+}
+
+/* Scrolling Background Effect */
+body {
+	background-image: url("/static/imgs/MK8DX_Black_Background.jpg");
+	background-position: bottom;
+	animation: 120s linear 0s infinite bp;
+	min-height: 100%;
+    display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+@keyframes bp {
+  from {
+    background-position:  1200px 0;
+  }
+  
+  to {
+    background-position:  0 1200px;
+  }
+}
+
+.navigation {
+	background-color: #252525;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.navigation a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+.navigation a:hover {
+  background: linear-gradient(90deg, rgba(237,122,175,1) 35%, rgba(45,117,187,1) 90%);
+  color: white;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.footer {
+	text-align: center;
+	font-weight: normal;
+	color: white;
+	background: linear-gradient(90deg, rgba(237,122,175,1) 35%, rgba(45,117,187,1) 90%);
+}
+
+/* Mobile Fixes */
+@media only screen and (max-width: 420px) {
+
+	.navigation a {
+		font-size: 15px;
+	}
+	
+}
