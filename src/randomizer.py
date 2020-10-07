@@ -4,7 +4,7 @@ import json
 class KartStructure():
 
     def __init__(self):
-        with open('data.json') as f:
+        with open('./src/data.json') as f:
             data = json.load(f)
         self.character = [i['name'] for i in data['part_dict']['char']]
         self.body = [i['name'] for i in data['part_dict']['body']]
