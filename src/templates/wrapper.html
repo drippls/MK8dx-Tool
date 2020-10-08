@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>Home</title>
+		<title>{{ title }}</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="static/CSS/wrapper.css" type="text/css" media="screen" charset="utf-8">
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
 
 			<div class="right">
 				<a href="{{ url_for('random') }}">Randomizer</a>
+				<a href="{{ url_for('exsets') }}">Example Sets</a>
 				<a href="{{ url_for('builder') }}">Builder</a>
-				<a href="{{ url_for('stats') }}">Stats</a>
 				<a href="{{ url_for('about') }}">About</a>
 			</div>
 		</div>
@@ -25,6 +25,8 @@
 		<main>
 			{% block content %}{% endblock %}
 		</main>
+
+		<img class="jl" src="/static/imgs/logo.png">
 
 		<div class="footer">
 			<span>Built/Designed by @JudeLakkis | Assets from Nintendo | Data from luzi82</span>

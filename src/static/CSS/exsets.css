@@ -1,0 +1,43 @@
+.container {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	line-height: 0px;
+}
+
+.set {
+	flex: 1 1 150px; /*  No stretching: */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    margin-left: 30px;
+	margin-right: 30px;
+
+	max-width: 350px;
+	background: white;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.box {
+	background: white;
+	flex: 0 1 150px; /*  No stretching: */
+	margin: 10px;
+	height: 130px;
+	width: 130px;
+	border-radius: 20px;
+}
+
+.c200 {
+	background: linear-gradient(225deg, #FF0076 0%, rgba(45, 117, 187, 0.9) 100%);
+}
+
+.c150 {
+	background: linear-gradient(225deg, #ED7AAF 13.02%, rgba(45, 117, 187, 0.9) 100%);
+}
+
+.c50 {
+	background: linear-gradient(225deg, #ED7AAF 0%, rgba(0, 129, 255, 0.9) 100%);
+}

@@ -48,6 +48,7 @@ form {
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 	box-shadow: 2px 1000px 1px #fff inset;
+	cursor: pointer;
 }
 
 .btn:hover {
@@ -65,7 +66,7 @@ form {
 
 .output {
 	color: black;
-	background: white;
+	background: linear-gradient(101deg, #FFFFFF, #FFFFFF);
 	width: 45%;
 	height: 10%;
 	overflow: hidden;
@@ -75,13 +76,13 @@ form {
 	margin-right: auto;
 }
 
-.jl {
-	position: absolute;
-	right: 0px;
-	bottom: 20px;
-	width: 40px;
+/* .output:hover { */
+/* 	background: linear-gradient(101deg, #2D75BB, #ED7AAF); */
+/* 	color: white; */
+/* 	border: white solid 5px; */
+/* 	transition: ease-out 0.5s; */
 
-}
+/* } */
 
 /* Vert */
 @media only screen and (max-width: 420px) {

@@ -8,6 +8,19 @@
 
 {% block content %}	
 
-	<h1 class="header">Home Page</h1>
+	<div class="container">
+		<img class="logo" src="https://www.mariowiki.com/images/thumb/7/78/Mario_Kart_8_Deluxe_logo.png/800px-Mario_Kart_8_Deluxe_logo.png">
+		<h2 class="captions">Kart Options</h2>
+		<div class="btnholder">
+			<button class="btn" onclick="location.href='{{ url_for("random") }}';" >Randomizer</button>
+			<button class="btn" onclick="location.href='{{ url_for("exsets") }}';" >Example Sets</button>
+			<button class="btn" onclick="location.href='{{ url_for("builder") }}';" >Kart Builder</button>
+		</div>
+
+		<h2 class="captions">Gamemode Options</h2>
+		<div class="btnholder">
+			<button class="btn">Coming Soon…</button>
+		</div>
+	</div>
 
 {% endblock %}	
