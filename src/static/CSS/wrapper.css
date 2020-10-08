@@ -12,7 +12,8 @@ body {
 	animation: 180s linear 0s infinite bp;
 	min-height: 100%;
     display: grid;
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: 54px auto 1fr;
+	/* minmax(10px, 60px) */
 }
 
 @keyframes bp {
@@ -61,11 +62,8 @@ body {
 }
 
 .jl {
-	margin-right:0;
-    margin-left: auto;
-	bottom: 20px;
 	width: 40px;
-
+	margin-left: auto;
 }
 
 /* Mobile Fixes */

@@ -6,6 +6,7 @@ class KartStructure():
     def __init__(self):
         # Need this for glitch.com, but doesn't work on localhost
         # with open('./src/data.json') as f:
+        # Need this to run the flask server on my computer
         with open('data.json') as f:
             data = json.load(f)
         self.character = [i['name'] for i in data['part_dict']['char']]
