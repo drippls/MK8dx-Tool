@@ -1,10 +1,15 @@
 function p(obj) { console.log(obj) }
 
 function GenerateHTML(arrayObj) {
+	var master_counter = 0;
 	var count = 0;
 	var hold = document.getElementById('hold');
 
 	for (index in arrayObj) { // p(count);
+		master_counter += 1;
+		if (master_counter > 100) {
+			break;
+		}
 		var arrItem = arrayObj[index];
 
 		var setClass = arrItem[0];
