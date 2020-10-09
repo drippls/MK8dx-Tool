@@ -10,10 +10,10 @@
 	<div class="container">
 		<img class="logo" src="https://www.mariowiki.com/images/thumb/7/78/Mario_Kart_8_Deluxe_logo.png/800px-Mario_Kart_8_Deluxe_logo.png">
 		<div class="tool">
-		    <div class="box">{{ character }}</div>
-		    <div class="box">{{ kart }}</div>
-		    <div class="box">{{ tires }}</div>
-		    <div class="box">{{ glider }}</div>
+		    <div id='char' class="box">{{ character }}</div>
+		    <div id='kart' class="box">{{ kart }}</div>
+		    <div id='tires' class="box">{{ tires }}</div>
+		    <div id='gilder' class="box">{{ glider }}</div>
 		</div>
 
 		<form action="/random_build" method="POST" accept-charset="utf-8">
@@ -27,5 +27,6 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" charset="utf-8" src="static/JS/random.js"></script>
 
 {% endblock %}	

@@ -1,5 +1,56 @@
 function p(obj) { console.log(obj) }
 
+function ImageExistance(imgName) {
+	var http = new XMLHttpRequest(); 
+
+	if (imgName.length === 0) { 
+		p("No img found…");
+	} else { 
+		http.open('HEAD', imgName, false); 
+		http.send(); 
+		if (http.status === 200) { 
+			// p('Image was found:');
+			// p(imgName)
+			return true;
+		} else { 
+			p('Image doesn\'t exist');
+			p(imgName);
+			return false;
+		} 
+	} 
+}
+
+
+function ImagePlacer(boxNumber, imgName) {
+	// Character Sprite
+	if (boxNumber == 2) {
+		var charSpriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
+		if (ImageExistance(charSpriteURL) == true) {
+			var img = document.createElement('img');
+			img.className = 'charSprite';
+			img.id = imgName;
+			img.src = charSpriteURL
+			return [true, img];
+		}
+	}
+	else if (boxNumber == 3 || boxNumber == 4 || boxNumber == 5) {
+		var charSpriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
+		if (ImageExistance(charSpriteURL) == true) {
+			charSpriteURL = './static/imgs/sprites/charSprites/unknown.png';
+			var img = document.createElement('img');
+			img.className = 'unknown';
+			img.id = imgName;
+			img.src = charSpriteURL;
+			return [true, img];
+		}
+	}
+	else {
+		var text = document.createTextNode(imgName);
+		return [true, text];
+	}
+}
+
+
 function GenerateHTML(arrayObj) {
 	var master_counter = 0;
 	var count = 0;
@@ -26,17 +77,19 @@ function GenerateHTML(arrayObj) {
 				// p(i);
 				var box = document.createElement('div');
 				box.className = 'box';
-				// p(typeof arrItem[i]);
-				if (arrItem[i] == '?') {
-					var img = document.createElement('img');
-					img.className = 'random';
-					img.src = 'static/imgs/random.png';
-					box.appendChild(img);
-				} else {
-					var text = document.createTextNode(arrItem[i]);
-					box.appendChild(text);
 
+				// ImagePlacer(i, arrItem[i]);
+
+				// p(typeof arrItem[i]);
+				object = ImagePlacer(i, arrItem[i]);
+				if (object[0] == true) {
+					box.appendChild(object[1]);
+				} else {
+					var text = document.createTextNode('Error…');
+					box.appendChild(text);
 				}
+				
+				// Keep this
 				set.appendChild(box);
 			}
 		} // Loop

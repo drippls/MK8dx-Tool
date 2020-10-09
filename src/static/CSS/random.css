@@ -26,6 +26,13 @@
 	font-size: 40px;
 }
 
+.box img {
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
 form {
 	padding: 10px;
 }

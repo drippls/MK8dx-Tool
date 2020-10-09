@@ -1,15 +1,15 @@
-c200, 200cc Control Set, ?, ?, ?, ?
-c150, 150cc Control Set, ?, ?, ?, ?
-c50, 50cc Control Set, ?, ?, ?, ?
+c200, 200cc Control Set, Mario, unknown, unknown, unknown
+c150, 150cc Control Set, Cat Peach, unknown, unknown, unknown
+c50, 50cc Control Set, Roy, unknown, unknown, unknown
 
-c200, 200cc Speed Set, ?, ?, ?, ?
-c150, 150cc Speed Set, ?, ?, ?, ?
-c50, 50cc Speed Set, ?, ?, ?, ?
+c200, 200cc Speed Set, Bowser, unknown, unknown, unknown
+c150, 150cc Speed Set, Wario, unknown, unknown, unknown
+c50, 50cc Speed Set, unknown, unknown, unknown, unknown
 
-cbattle, Battle Control Set, ?, ?, ?, ?
-cbattle, Battle Speed Set, ?, ?, ?, ?
-cbattle, Battle Funky Set, ?, ?, ?, ?
+cbattle, Battle Control Set, unknown, unknown, unknown, unknown
+cbattle, Battle Speed Set, unknown, unknown, unknown, unknown
+cbattle, Battle Funky Set, unknown, unknown, unknown, unknown
 
-cbattle, Battle Funky Set, ?, ?, ?, ?
-c200, 200cc Speed Set, ?, ?, ?, ?
-c200, 200cc Speed Set, ?, ?, ?, ?
+cbattle, Battle Funky Set, unknown, unknown, unknown, unknown
+c200, 200cc Speed Set, unknown, unknown, unknown, unknown
+c200, 200cc Speed Set, unknown, unknown, unknown, unknown
