@@ -27,8 +27,8 @@ class KartStructure():
     def generate_code(self):
         character = str(self.character.index(self.setup[0]))
         body = str(self.body.index(self.setup[1]))
-        tire = str(self.tire.index(self.setup[3]))
-        glider = str(self.glider.index(self.setup[2]))
+        tire = str(self.tire.index(self.setup[2]))
+        glider = str(self.glider.index(self.setup[3]))
         self.kartcode = '.'.join([character, body, tire, glider])
         return self.kartcode
 
