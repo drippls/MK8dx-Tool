@@ -20,33 +20,31 @@ function ImageExistance(imgName) {
 	} 
 }
 
-
 function ImagePlacer(boxNumber, imgName) {
-	// Character Sprite
-	if (boxNumber == 2) {
-		var charSpriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
-		if (ImageExistance(charSpriteURL) == true) {
-			var img = document.createElement('img');
-			img.className = 'charSprite';
-			img.id = imgName;
-			img.src = charSpriteURL
-			return [true, img];
-		}
-	}
-	else if (boxNumber == 3 || boxNumber == 4 || boxNumber == 5) {
-		var charSpriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
-		if (ImageExistance(charSpriteURL) == true) {
-			charSpriteURL = './static/imgs/sprites/charSprites/unknown.png';
-			var img = document.createElement('img');
-			img.className = 'unknown';
-			img.id = imgName;
-			img.src = charSpriteURL;
-			return [true, img];
-		}
-	}
+
+	// Image locations
+	var spriteURL = null;
+	if (imgName == 'unknown') { spriteURL = './static/imgs/sprites/charSprites/unknown.png' }
 	else {
-		var text = document.createTextNode(imgName);
-		return [true, text];
+		if (boxNumber == 2) {
+			var spriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
+		} else if (boxNumber == 3 && imgName != '?') {
+			var spriteURL = './static/imgs/sprites/kartSprites/' + imgName + '.png';
+		} else if (boxNumber == 4 && imgName != '?') {
+			var spriteURL = './static/imgs/sprites/tireSprites/' + imgName + '.png';
+		} else if (boxNumber == 5 && imgName != '?') {
+			var spriteURL = './static/imgs/sprites/gliderSprites/' + imgName + '.png';
+		};
+	}
+
+	p(spriteURL);
+
+	// Image check & creation
+	if (ImageExistance(spriteURL) == true) {
+		var img = document.createElement('img');
+		img.id = imgName;
+		img.src = spriteURL;
+		return [true, img];
 	}
 }
 

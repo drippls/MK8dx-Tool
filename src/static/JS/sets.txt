@@ -1,4 +1,4 @@
-c200, 200cc Control Set, Mario, unknown, unknown, unknown
+c200, 200cc Control Set, Mario, Varmint, Cyber Slick, Parachute
 c150, 150cc Control Set, Cat Peach, unknown, unknown, unknown
 c50, 50cc Control Set, Roy, unknown, unknown, unknown
 

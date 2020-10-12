@@ -47,6 +47,10 @@ h1 {
 	/* padding-top: 30px; */
 }
 
+.box img {
+	width: 100px;
+}
+
 .heading {
 	color: white;
 	font-size: 40px;

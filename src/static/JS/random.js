@@ -20,20 +20,38 @@ function ImageExistance(imgName) {
 
 
 function ImagePlacer(boxName) {
+	
 	var currentbox = document.getElementById(boxName);
 	var imgName = currentbox.textContent;
-	var charSpriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
-	if (ImageExistance(charSpriteURL) == true && boxName == 'char') {
-		// p('Can place image')
+	var spriteURL = './static/imgs/sprites/'+ boxName + 'Sprites/' + imgName + '.png';
+	p(spriteURL);
+	if (ImageExistance(spriteURL) == true) {
 		var img = document.createElement('img');
-		img.className = 'charSprite';
+		img.className = boxName + 'Sprite';
 		img.id = imgName;
-		img.src = charSpriteURL;
-		// currentbox.textContent = '';
-		currentbox.appendChild(img)
-
+		img.src = spriteURL;
 	}
+	currentbox.appendChild(img);
 }
 
 ImagePlacer('char')
+ImagePlacer('kart')
+ImagePlacer('tire')
+ImagePlacer('glider')
+
+
+// 	var currentbox = document.getElementById(boxName);
+// 	var imgName = currentbox.textContent;
+// 	var charSpriteURL = './static/imgs/sprites/'+ boxName + 'Sprites/' + imgName + '.png';
+// 	if (ImageExistance(charSpriteURL) == true && boxName == 'char') {
+// 		// p('Can place image')
+// 		var img = document.createElement('img');
+// 		img.className = 'charSprite';
+// 		img.id = imgName;
+// 		img.src = charSpriteURL;
+// 		// currentbox.textContent = '';
+// 		currentbox.appendChild(img)
+
+// 	}
+
 
