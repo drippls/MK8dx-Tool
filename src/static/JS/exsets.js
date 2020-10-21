@@ -1,20 +1,14 @@
-function p(obj) { console.log(obj) }
-
 function ImageExistance(imgName) {
 	var http = new XMLHttpRequest(); 
 
 	if (imgName.length === 0) { 
-		p("No img found…");
+		return null;
 	} else { 
 		http.open('HEAD', imgName, false); 
 		http.send(); 
 		if (http.status === 200) { 
-			// p('Image was found:');
-			// p(imgName)
 			return true;
 		} else { 
-			p('Image doesn\'t exist');
-			p(imgName);
 			return false;
 		} 
 	} 
@@ -24,20 +18,21 @@ function ImagePlacer(boxNumber, imgName) {
 
 	// Image locations
 	var spriteURL = null;
+	var cName = null;
 	if (imgName == 'unknown') { spriteURL = './static/imgs/sprites/charSprites/unknown.png' }
 	else {
 		if (boxNumber == 2) {
 			var spriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
-			var cName = 'char';
+			cName = 'char';
 		} else if (boxNumber == 3 && imgName != '?') {
 			var spriteURL = './static/imgs/sprites/kartSprites/' + imgName + '.png';
-			var cName = 'kart';
+			cName = 'kart';
 		} else if (boxNumber == 4 && imgName != '?') {
 			var spriteURL = './static/imgs/sprites/tireSprites/' + imgName + '.png';
-			var cName = 'tire';
+			cName = 'tire';
 		} else if (boxNumber == 5 && imgName != '?') {
 			var spriteURL = './static/imgs/sprites/gliderSprites/' + imgName + '.png';
-			var cName = 'glider';
+			cName = 'glider';
 		};
 	}
 
@@ -74,16 +69,11 @@ function GenerateHTML(arrayObj) {
 		setTitle.className = 'heading';
 		setTitle.appendChild(document.createTextNode(arrItem[1]));
 		set.appendChild(setTitle);
-		// p(arrItem)
 		for (i in arrItem) {
 			if (i > 1) {
-				// p(i);
 				var box = document.createElement('div');
 				box.className = 'box';
 
-				// ImagePlacer(i, arrItem[i]);
-
-				// p(typeof arrItem[i]);
 				object = ImagePlacer(i, arrItem[i]);
 				if (object[0] == true) {
 					box.appendChild(object[1]);
@@ -92,7 +82,7 @@ function GenerateHTML(arrayObj) {
 					box.appendChild(text);
 				}
 				
-				// Keep this
+				// Adds box to set item
 				set.appendChild(box);
 			}
 		} // Loop
