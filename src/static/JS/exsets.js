@@ -28,12 +28,16 @@ function ImagePlacer(boxNumber, imgName) {
 	else {
 		if (boxNumber == 2) {
 			var spriteURL = './static/imgs/sprites/charSprites/' + imgName + '.png';
+			var cName = 'char';
 		} else if (boxNumber == 3 && imgName != '?') {
 			var spriteURL = './static/imgs/sprites/kartSprites/' + imgName + '.png';
+			var cName = 'kart';
 		} else if (boxNumber == 4 && imgName != '?') {
 			var spriteURL = './static/imgs/sprites/tireSprites/' + imgName + '.png';
+			var cName = 'tire';
 		} else if (boxNumber == 5 && imgName != '?') {
 			var spriteURL = './static/imgs/sprites/gliderSprites/' + imgName + '.png';
+			var cName = 'glider';
 		};
 	}
 
@@ -43,6 +47,7 @@ function ImagePlacer(boxNumber, imgName) {
 	if (ImageExistance(spriteURL) == true) {
 		var img = document.createElement('img');
 		img.id = imgName;
+		img.className = cName;
 		img.src = spriteURL;
 		return [true, img];
 	}

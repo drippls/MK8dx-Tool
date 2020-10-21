@@ -47,10 +47,6 @@ h1 {
 	/* padding-top: 30px; */
 }
 
-.box img {
-	width: 100px;
-}
-
 .heading {
 	color: white;
 	font-size: 40px;
@@ -82,6 +78,11 @@ h1 {
 	margin-right: auto;
 	text-align: center;
 	line-height: 0px;
+}
+
+.kart, .tire, .glider {
+	padding-top: 16px;
+	width: 155px;
 }
 
 .btn {

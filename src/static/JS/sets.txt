@@ -1,15 +1,11 @@
-c200, 200cc Control Set, Mario, Varmint, Cyber Slick, Parachute
-c150, 150cc Control Set, Cat Peach, unknown, unknown, unknown
-c50, 50cc Control Set, Roy, unknown, unknown, unknown
+c200, 200cc Control Set, Mario, Biddybuggy, Roller, Cloud Glider
+c150, 150cc Control Set, Cat Peach, Mach 8, Crimson Slim, Parachute
+c50, 50cc Control Set, Roy, Inkstriker, Leaf Tires, Cloud Glider
 
-c200, 200cc Speed Set, Bowser, unknown, unknown, unknown
-c150, 150cc Speed Set, Wario, unknown, unknown, unknown
-c50, 50cc Speed Set, unknown, unknown, unknown, unknown
+c200, 200cc Speed Set, Roy, Wild Wiggler, Azure Roller, Cloud Glider
+c150, 150cc Speed Set, Wario, Wild Wiggler, Azure Roller, Cloud Glider
+c50, 50cc Speed Set, Bowser, Inkstriker, Leaf Tires, Cloud Glider
 
-cbattle, Battle Control Set, unknown, unknown, unknown, unknown
-cbattle, Battle Speed Set, unknown, unknown, unknown, unknown
-cbattle, Battle Funky Set, unknown, unknown, unknown, unknown
-
-cbattle, Battle Funky Set, unknown, unknown, unknown, unknown
-c200, 200cc Speed Set, unknown, unknown, unknown, unknown
-c200, 200cc Speed Set, unknown, unknown, unknown, unknown
+cbattle, Battle Control Set, Mario, Pipe Frame, Roller, Plane Glider
+cbattle, Battle Speed Set, Morton, Inkstriker, Roller, Plane Glider
+cbattle, Battle Funky Set, Bowser, Badwagon, Cyber Slick, Wario Wing
