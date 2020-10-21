@@ -1,6 +1,6 @@
 <h1 align="center">Mario Kart 8 DX Tools</h1>
 <h3 align="center">
-	[Website Link](https://mk8dx-tool.glitch.me/)
+	https://mk8dx-tool.glitch.me/
 </h3>
 
 This is a basic tool created to make Mario Kart 8 Delux a bit more fun for everyone. The kart randomizer makes games more interesting when playing with friends, to keep the sessions going without getting too repetitive.
